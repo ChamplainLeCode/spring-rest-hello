@@ -1,7 +1,7 @@
 FROM openjdk:8
 
 WORKDIR /app
-ADD . /app
+ADD . .
 
 RUN ./mvnw clean && ./mvnw test && ./mvnw install
 
