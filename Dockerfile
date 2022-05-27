@@ -1,8 +1,8 @@
 FROM openjdk:8
 
 WORKDIR /app
-ADD . .
+ADD . /app
 
-RUN ./mvnw clean && ./mvnw test && ./mvnw install
+RUN /app/.mvnw clean && /app/.mvnw test && /app/.mvnw install
 
 CMD ["java", "-jar", "target/openshift-0.0.1-SNAPSHOT.jar" ]
